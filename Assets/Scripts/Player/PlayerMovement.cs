@@ -15,23 +15,20 @@ public class PlayerMovement : MonoBehaviour
     // /actions/PlayerActions
     private PlayerActions actions;
 
-    // Gets the hash of these values, this allows us to only have
-    // to change this line if we need to change this in the future.
-    private readonly int moveX = Animator.StringToHash("MoveX");
-    private readonly int moveY = Animator.StringToHash("MoveY");
-    private readonly int moving = Animator.StringToHash("Moving");
-
     private Rigidbody2D rb2D;
 
     private Vector2 moveDirection;
 
-    private Animator animator;
+    private PlayerAnimations playerAnimations;
+
+    private Player player;
 
     private void Awake()
     {
+        player = GetComponent<Player>();
         actions = new PlayerActions();
-        animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+        playerAnimations = GetComponent<PlayerAnimations>();
     }
 
     // Update is called once per frame
@@ -53,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
     // rate.
     private void Move()
     {
+        // Stop player movement if player is dead.
+        if (player.Stats.Health <= 0) return;
         rb2D.MovePosition(rb2D.position + moveDirection * (speed * Time.fixedDeltaTime));
     }
 
@@ -68,15 +67,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveDirection == Vector2.zero)
         {
-            animator.SetBool(moving, false);
+            playerAnimations.SetMoveBoolTransition(false);
             return;
         }
 
-        animator.SetBool(moving, true);
+        playerAnimations.SetMoveBoolTransition(true);
 
         // Update moveX and moveY for animation reference.
-        animator.SetFloat(moveX, moveDirection.x);
-        animator.SetFloat(moveY, moveDirection.y);
+        playerAnimations.SetMoveAnimation(moveDirection);
     }
 
     // Called when our game objects gets enabled.
