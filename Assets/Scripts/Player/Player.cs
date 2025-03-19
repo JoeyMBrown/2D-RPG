@@ -6,4 +6,19 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerStats stats;
 
     public PlayerStats Stats => stats;
+
+    private PlayerAnimations animations;
+
+    private void Awake()
+    {
+        animations = GetComponent<PlayerAnimations>();
+    }
+
+    // Here we can reset player stats, then call the method in our
+    // animator to reset our player animation as well.
+    public void ResetPlayer()
+    {
+        stats.ResetPlayerStats();
+        animations.ResetPlayer();
+    }
 }
