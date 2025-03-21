@@ -740,6 +740,7 @@ GameObject:
   - component: {fileID: 237785335}
   - component: {fileID: 237785334}
   - component: {fileID: 237785333}
+  - component: {fileID: 237785338}
   m_Layer: 6
   m_Name: Enemy_Raccoon
   m_TagString: Enemy
@@ -902,6 +903,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1379246792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &237785338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237785332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initState: 
+  states: []
 --- !u!1001 &241913104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4822,6 +4837,7 @@ GameObject:
   - component: {fileID: 644775213}
   - component: {fileID: 644775212}
   - component: {fileID: 644775211}
+  - component: {fileID: 644775216}
   m_Layer: 6
   m_Name: Enemy_Mushroom
   m_TagString: Enemy
@@ -4984,6 +5000,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1379246792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &644775216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644775210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initState: 
+  states: []
 --- !u!1 &647297428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5439,6 +5469,7 @@ GameObject:
   - component: {fileID: 856008415}
   - component: {fileID: 856008414}
   - component: {fileID: 856008413}
+  - component: {fileID: 856008418}
   m_Layer: 6
   m_Name: Enemy_Reptile
   m_TagString: Enemy
@@ -5601,6 +5632,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1379246792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &856008418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856008412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initState: 
+  states: []
 --- !u!1001 &857351460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6910,6 +6955,7 @@ GameObject:
   - component: {fileID: 1150189321}
   - component: {fileID: 1150189320}
   - component: {fileID: 1150189319}
+  - component: {fileID: 1150189324}
   m_Layer: 6
   m_Name: Enemy_Snake
   m_TagString: Enemy
@@ -7072,6 +7118,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1379246792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1150189324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150189318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initState: 
+  states: []
 --- !u!1001 &1154794646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26136,6 +26196,7 @@ GameObject:
   - component: {fileID: 1369221866}
   - component: {fileID: 1369221865}
   - component: {fileID: 1369221864}
+  - component: {fileID: 1369221869}
   m_Layer: 6
   m_Name: Enemy_Beast
   m_TagString: Enemy
@@ -26298,6 +26359,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1379246792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1369221869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369221863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initState: 
+  states: []
 --- !u!1001 &1369896011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26880,6 +26955,7 @@ GameObject:
   - component: {fileID: 1576510460}
   - component: {fileID: 1576510459}
   - component: {fileID: 1576510458}
+  - component: {fileID: 1576510463}
   m_Layer: 6
   m_Name: Enemy_Cyclops
   m_TagString: Enemy
@@ -27042,6 +27118,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1379246792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1576510463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576510457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initState: 
+  states: []
 --- !u!4 &1584265117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7926285673793284404, guid: 1622a8804667138449fbda9e51643f3b, type: 3}
@@ -28746,6 +28836,7 @@ GameObject:
   - component: {fileID: 1834209323}
   - component: {fileID: 1834209322}
   - component: {fileID: 1834209321}
+  - component: {fileID: 1834209326}
   m_Layer: 6
   m_Name: Enemy_Flame
   m_TagString: Enemy
@@ -28908,6 +28999,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1379246792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1834209326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834209320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initState: 
+  states: []
 --- !u!1001 &1840948694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29033,6 +29138,7 @@ GameObject:
   - component: {fileID: 1936924675}
   - component: {fileID: 1936924674}
   - component: {fileID: 1936924673}
+  - component: {fileID: 1936924678}
   m_Layer: 6
   m_Name: Enemy_Bamboo
   m_TagString: Enemy
@@ -29195,6 +29301,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1379246792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1936924678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936924672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initState: 
+  states: []
 --- !u!1001 &1945265550
 PrefabInstance:
   m_ObjectHideFlags: 0
