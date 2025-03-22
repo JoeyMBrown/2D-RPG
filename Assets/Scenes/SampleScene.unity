@@ -5510,8 +5510,8 @@ GameObject:
   - component: {fileID: 856008414}
   - component: {fileID: 856008413}
   - component: {fileID: 856008418}
-  - component: {fileID: 856008419}
   - component: {fileID: 856008420}
+  - component: {fileID: 856008421}
   m_Layer: 6
   m_Name: Enemy_Reptile
   m_TagString: Enemy
@@ -5668,7 +5668,7 @@ Transform:
   m_GameObject: {fileID: 856008412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.53, y: -0.59, z: -137.62846}
+  m_LocalPosition: {x: 2.21, y: -0.49, z: -137.62846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5686,27 +5686,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: Wander
+  initState: Patrol
   states:
-  - ID: Wander
+  - ID: Patrol
     Actions:
-    - {fileID: 856008419}
+    - {fileID: 856008421}
     Transitions: []
---- !u!114 &856008419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856008412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d1ba42b57fbfb46ad22eaa9556833f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.5
-  wanderTime: 1
-  moveRange: {x: 2, y: 2}
 --- !u!114 &856008420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5719,7 +5704,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec6d5e01e84cc346957e5927a017786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
+  points:
+  - {x: -1.6962051, y: 1.6574974, z: 0}
+  - {x: 1.6472836, y: -1.6421652, z: 0}
+  - {x: -1.6798859, y: -1.7074041, z: 0}
+  - {x: 1.647295, y: 1.6686964, z: 0}
+--- !u!114 &856008421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856008412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef099e7d04b26c49b0e4196e8f369b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
 --- !u!1001 &857351460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26291,6 +26293,7 @@ GameObject:
   - component: {fileID: 1369221865}
   - component: {fileID: 1369221864}
   - component: {fileID: 1369221869}
+  - component: {fileID: 1369221871}
   - component: {fileID: 1369221870}
   m_Layer: 6
   m_Name: Enemy_Beast
@@ -26448,7 +26451,7 @@ Transform:
   m_GameObject: {fileID: 1369221863}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7245941, y: -5.4, z: -137.62846}
+  m_LocalPosition: {x: -8.92, y: -8.37, z: -137.62846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26466,9 +26469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: Wander
+  initState: Patrol
   states:
-  - ID: Wander
+  - ID: Patrol
     Actions:
     - {fileID: 1369221870}
     Transitions: []
@@ -26481,12 +26484,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369221863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d1ba42b57fbfb46ad22eaa9556833f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ef099e7d04b26c49b0e4196e8f369b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  wanderTime: 1
-  moveRange: {x: 2, y: 2}
+--- !u!114 &1369221871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369221863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec6d5e01e84cc346957e5927a017786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: 1.8727112, y: -0.47320366, z: 0}
+  - {x: 6.4223366, y: 0.99880123, z: 0}
+  - {x: 9.6701145, y: 3.366292, z: 0}
+  - {x: 12.942339, y: 5.9059134, z: 0}
 --- !u!1001 &1369896011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27070,6 +27088,7 @@ GameObject:
   - component: {fileID: 1576510459}
   - component: {fileID: 1576510458}
   - component: {fileID: 1576510463}
+  - component: {fileID: 1576510465}
   - component: {fileID: 1576510464}
   m_Layer: 6
   m_Name: Enemy_Cyclops
@@ -27227,7 +27246,7 @@ Transform:
   m_GameObject: {fileID: 1576510457}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.79, y: -3.88, z: -137.62846}
+  m_LocalPosition: {x: 8.67, y: -3.39, z: -137.62846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27245,11 +27264,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: Wander
+  initState: Patrol
   states:
-  - ID: Wander
+  - ID: Patrol
     Actions:
-    - {fileID: 1576510464}
+    - {fileID: 1576510465}
     Transitions: []
 --- !u!114 &1576510464
 MonoBehaviour:
@@ -27260,12 +27279,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1576510457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d1ba42b57fbfb46ad22eaa9556833f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ec6d5e01e84cc346957e5927a017786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: -0.023241043, y: 0.04611206, z: 0}
+  - {x: 3.3502426, y: -0.6290097, z: 0}
+  - {x: 5.0719166, y: -3.7470183, z: 0}
+  - {x: 7.0262203, y: -1.164959, z: 0}
+--- !u!114 &1576510465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576510457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef099e7d04b26c49b0e4196e8f369b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  wanderTime: 1
-  moveRange: {x: 2, y: 2}
 --- !u!4 &1584265117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7926285673793284404, guid: 1622a8804667138449fbda9e51643f3b, type: 3}
@@ -28971,6 +29005,7 @@ GameObject:
   - component: {fileID: 1834209322}
   - component: {fileID: 1834209321}
   - component: {fileID: 1834209326}
+  - component: {fileID: 1834209328}
   - component: {fileID: 1834209327}
   m_Layer: 6
   m_Name: Enemy_Flame
@@ -29128,7 +29163,7 @@ Transform:
   m_GameObject: {fileID: 1834209320}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.06, y: -4.33, z: -137.62846}
+  m_LocalPosition: {x: 22.69, y: -3.79, z: -137.62846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29146,11 +29181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: Wander
+  initState: Patrol
   states:
-  - ID: Wander
+  - ID: Patrol
     Actions:
-    - {fileID: 1834209327}
+    - {fileID: 1834209328}
     Transitions: []
 --- !u!114 &1834209327
 MonoBehaviour:
@@ -29161,12 +29196,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1834209320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d1ba42b57fbfb46ad22eaa9556833f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ec6d5e01e84cc346957e5927a017786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: -0.18612576, y: -0.1400137, z: 0}
+  - {x: -4.397209, y: -0.21023035, z: 0}
+  - {x: -7.7939777, y: 0.6269102, z: 0}
+  - {x: -3.2106447, y: 2.743658, z: 0}
+--- !u!114 &1834209328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834209320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef099e7d04b26c49b0e4196e8f369b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  wanderTime: 1
-  moveRange: {x: 2, y: 2}
 --- !u!1001 &1840948694
 PrefabInstance:
   m_ObjectHideFlags: 0

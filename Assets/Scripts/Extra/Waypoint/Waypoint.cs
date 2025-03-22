@@ -13,6 +13,14 @@ public class Waypoint : MonoBehaviour
     private void Start()
     {
         EntityPosition = transform.position;
+        gameStarted = true;
+    }
+
+    // Return the position of the point at the
+    // given pointIndex.
+    public Vector3 GetPosition(int pointIndex)
+    {
+        return EntityPosition + points[pointIndex];
     }
 
     private void OnDrawGizmos()
