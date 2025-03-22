@@ -915,8 +915,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c358cd5fcb824b4c80eb0fc4f9f1b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: 
-  states: []
+  initState: Wander
+  states:
+  - ID: Wander
+    Actions:
+    - {fileID: 0}
+    Transitions: []
 --- !u!1001 &241913104
 PrefabInstance:
   m_ObjectHideFlags: 0
