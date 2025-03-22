@@ -37,6 +37,12 @@ public class ActionWander : FSMAction
         {
             transform.Translate(movement);
         }
+
+        if (timer <= 0f)
+        {
+            GetNewDestination();
+            timer = wanderTime;
+        }
     }
 
     private void GetNewDestination()
@@ -52,5 +58,17 @@ public class ActionWander : FSMAction
         // movePosition will be 11, 10.  As these are the new coords
         // I need to move to.
         movePosition = transform.position + new Vector3 (randomX, randomY);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (moveRange != Vector2.zero)
+        {
+            Gizmos.color = Color.cyan;
+            // Visualize our moveRange.  *2 is to show both axis?
+            Gizmos.DrawWireCube(transform.position, moveRange * 2f);
+            // Visualize where our enemy is moving.
+            Gizmos.DrawLine(transform.position, movePosition);
+        }
     }
 }
