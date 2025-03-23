@@ -5,6 +5,7 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField] private string initState; // Initial enemy state (PatrolState)
     [SerializeField] private FSMState[] states;
     public FSMState CurrentState {  get; private set; }
+    public Transform Player { get; set; }
 
     private void Start()
     {
