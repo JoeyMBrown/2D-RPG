@@ -14,15 +14,23 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (stats.Health <= 0f)
         {
-            TakeDamage(1f);
+            PlayerDead();
         }
     }
 
     public void TakeDamage(float amount)
     {
+        // Don't take damage if player doesn't have HP.
+        if (!PlayerHasHealth()) return;
+
         stats.Health -= amount;
+
+        // Here we call our damage mangager to show
+        // the amount of damage being taken, and
+        // pass in the player's transform location.
+        DamageManager.Instance.ShowDamageText(amount, transform);
 
         if (stats.Health <= 0 )
         {
