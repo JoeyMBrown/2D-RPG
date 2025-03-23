@@ -30,6 +30,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
     }
 
+    public bool PlayerHasHealth()
+    {
+        return stats.Health > 0f;
+    }
+
     private void PlayerDead()
     {
         playerAnimations.SetDeadAnimation();
