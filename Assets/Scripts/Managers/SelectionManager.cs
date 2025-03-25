@@ -45,12 +45,13 @@ public class SelectionManager : MonoBehaviour
                     // Fires an event when an enemy was clicked, passing in
                     // clicked enemy reference.
                     OnEnemySelectedEvent?.Invoke(enemy);
-                } else
-                {
-                    // Fires when we click inside game view and a layermask of enemy
-                    // is not clicked.
-                    OnNoSelectionEvent?.Invoke();
                 }
+            }
+            else
+            {
+                // Fires when we click inside game view and a layermask of enemy
+                // is not clicked.
+                OnNoSelectionEvent?.Invoke();
             }
         }
     }
