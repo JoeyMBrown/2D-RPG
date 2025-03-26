@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     // to be seen inside of Unity editor even know it is
     // private.
     [SerializeField] private float speed;
+
+    public Vector2 MoveDirection => moveDirection;
     
     // This references the script we auto-generated at
     // /actions/PlayerActions

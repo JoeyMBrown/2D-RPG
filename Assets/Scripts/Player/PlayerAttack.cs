@@ -4,15 +4,29 @@ using UnityEngine.UIElements;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [Header("Config")]
+    [SerializeField] private Weapon initialWeapon;
+    // Positions that projectiles can be spawned at.
+    [SerializeField] private Transform[] attackPositions;
+
     private PlayerActions actions;
     private PlayerAnimations playerAnimations;
+    // A reference to the current movement direction.
+    private PlayerMovement playerMovement;
+    private PlayerMana playerMana;
     private EnemyBrain enemyTarget;
     private Coroutine attackCoroutine;
+
+    private Transform currentAttackPosition;
+    // Used to rotate projectiles.
+    private float currentAttackRotation;
 
     private void Awake()
     {
         actions = new PlayerActions();
+        playerMovement = GetComponent<PlayerMovement>();
         playerAnimations = GetComponent<PlayerAnimations>();
+        playerMana = GetComponent<PlayerMana>();
     }
 
     private void Start()
@@ -20,6 +34,11 @@ public class PlayerAttack : MonoBehaviour
         // Determine if our click atack action was performed,
         // if so, call Attack method within this context?
         actions.Attack.ClickAttack.performed += ctx => Attack();
+    }
+
+    private void Update()
+    {
+        GetFirePosition();
     }
 
     private void Attack()
@@ -42,9 +61,65 @@ public class PlayerAttack : MonoBehaviour
     // in the middle of the method.
     private IEnumerator IEAttack()
     {
+        if (currentAttackPosition != null)
+        {
+            // The rotation of our projectile.
+            Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, currentAttackRotation));
+
+            // Spawn our projectile
+            Projectile projectile = Instantiate(initialWeapon.ProjectilePrefab, currentAttackPosition.position, rotation);
+
+            // Set the movement direction of our projectile to be UP.
+            // This is in relation to the projectile game object, it will always move up.
+            // This works because we are rotating the game object when we spawn it in.
+            // This means "UP" will always be away from the player.
+            projectile.Direction = Vector3.up;
+            playerMana.UseMana(initialWeapon.RequiredMana);
+        }
         playerAnimations.SetAttackAnimation(true);
         yield return new WaitForSeconds(0.5f);
         playerAnimations.SetAttackAnimation(false);
+    }
+
+    private void GetFirePosition()
+    {
+        // This sets our current move direction.
+        Vector2 moveDirection = playerMovement.MoveDirection;
+        switch (moveDirection.x)
+        {
+            // If x > 0, we're facing right
+            case > 0f:
+                // Attack position is right position
+                currentAttackPosition = attackPositions[1]; // This correlates to the unity editor and the indexes of each attack position setup there.
+                // Rotate projectile -90
+                currentAttackRotation = -90f;
+                break;
+            // If x < 0, we're facing left
+            case < 0f:
+                // Attack position is left position
+                currentAttackPosition = attackPositions[3];
+                // rotate projectile -270
+                currentAttackRotation = -270f;
+                break;
+        }
+        
+        switch (moveDirection.y)
+        {
+            // If y > 0, we're facing up
+            case > 0f:
+                // Attack position is up position
+                currentAttackPosition = attackPositions[0]; // This correlates to the unity editor and the indexes of each attack position setup there.
+                // Rotate projectile 0
+                currentAttackRotation = 0f;
+                break;
+            // If y < 0, we're facing down
+            case < 0f:
+                // Attack position is left position
+                currentAttackPosition = attackPositions[2];
+                // rotate projectile -180f
+                currentAttackRotation = -180f;
+                break;
+        }
     }
 
     private void EnemySelectedCallback(EnemyBrain enemySelected)

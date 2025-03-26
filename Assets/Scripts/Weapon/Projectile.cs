@@ -17,6 +17,9 @@ public class Projectile : MonoBehaviour
     // An event that is called when collider enters 2D trigger
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision);
+        // Debug.Log(other.name) <-- Shows the game object we are collding with.
+        // Destroy this gameObject when it collides with something.
+        
+        Destroy(gameObject);
     }
 }
