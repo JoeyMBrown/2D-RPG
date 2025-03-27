@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 // Note, this enemy will take damage - so we're extending IDamageable
 public class EnemyHealth : MonoBehaviour, IDamageable
 {
+    public static event Action OnEnemyDeadEvent;
+
     [Header("Config")]
     [SerializeField] private float health;
     private EnemyBrain enemyBrain;
@@ -40,6 +43,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             // Updating the enemys layer to "Ignore Raycast".  This will
             // stop projectiles from colliding with it.
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+            // Fire enemy dead event.
+            OnEnemyDeadEvent?.Invoke();
         }
         else
         {
