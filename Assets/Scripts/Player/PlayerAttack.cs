@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 public class PlayerAttack : MonoBehaviour
 {
     [Header("Config")]
+    [SerializeField] private PlayerStats stats;
     [SerializeField] private Weapon initialWeapon;
     // Positions that projectiles can be spawned at.
     [SerializeField] private Transform[] attackPositions;
@@ -101,8 +102,8 @@ public class PlayerAttack : MonoBehaviour
         // This means "UP" will always be away from the player.
         projectile.Direction = Vector3.up;
 
-        // Set the projectile's damage to the weapon's damage
-        projectile.Damage = CurrentWeapon.Damage;
+        // Set the projectile's damage to our calculated damage taking crit into account.
+        projectile.Damage = GetAttackDamage();
 
         playerMana.UseMana(CurrentWeapon.RequiredMana);
     }
@@ -120,8 +121,24 @@ public class PlayerAttack : MonoBehaviour
         // If we're within range of the enemy, damage them.
         if (currentDistanceToEnemy <= minDistanceMeleeAttack)
         {
-            enemyTarget.GetComponent<IDamageable>().TakeDamage(1);
+            enemyTarget.GetComponent<IDamageable>().TakeDamage(GetAttackDamage());
         }
+    }
+
+    private float GetAttackDamage()
+    {
+        float damage = stats.BaseDamage;
+        damage += CurrentWeapon.Damage;
+
+        float randomPercentage = Random.Range(0f, 100f);
+
+        // If within critical chance range, apply crit damage.
+        if (randomPercentage <= stats.CriticalChance)
+        {
+            damage += damage * (stats.CriticalDamage / 100f);
+        }
+
+        return damage;
     }
 
     private void GetFirePosition()

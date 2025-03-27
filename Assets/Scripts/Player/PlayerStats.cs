@@ -25,6 +25,12 @@ public class PlayerStats : ScriptableObject
     // next nextLevelExp amount.
     [Range(1f, 100f)] public float ExpMultiplier;
 
+    [Header("Attack")]
+    public float BaseDamage;
+    public float CriticalChance;
+    public float CriticalDamage;
+
+
     public void ResetPlayerStats()
     {
         Health = MaxHealth;

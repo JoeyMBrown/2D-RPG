@@ -10319,7 +10319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
 --- !u!1001 &931032799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10469,7 +10469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
 --- !u!1 &966011607
 GameObject:
   m_ObjectHideFlags: 0
@@ -10747,7 +10747,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8004c5e96fafd54583629a5f3b04b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialWeapon: {fileID: 11400000, guid: cbbd5291215e63f4ea23a84e4d42c46d, type: 2}
+  stats: {fileID: 11400000, guid: f47a6c1469da54a44b0f470432753879, type: 2}
+  initialWeapon: {fileID: 11400000, guid: ad089a222aa5bae428da0176f9494b4f, type: 2}
   attackPositions:
   - {fileID: 1883144536}
   - {fileID: 1619993840}
@@ -30772,7 +30773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
 --- !u!4 &1419381323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3512119742972070544, guid: 6ef20879242c2a941af49cb2b4e959b6, type: 3}
@@ -31107,7 +31108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
 --- !u!4 &1529735939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7926285673793284404, guid: 1622a8804667138449fbda9e51643f3b, type: 3}
@@ -31281,7 +31282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
 --- !u!4 &1584265117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7926285673793284404, guid: 1622a8804667138449fbda9e51643f3b, type: 3}
@@ -33200,7 +33201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
 --- !u!4 &1936924677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4432325128686774746, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
@@ -33218,7 +33219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
 --- !u!1001 &1945265550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34119,7 +34120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
 --- !u!1001 &2123967102
 PrefabInstance:
   m_ObjectHideFlags: 0
