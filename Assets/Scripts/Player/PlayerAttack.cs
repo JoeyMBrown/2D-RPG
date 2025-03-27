@@ -63,6 +63,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if (currentAttackPosition != null)
         {
+            // Essentially a return for a Coroutine - if not enough mana, don't do anything.
+            if (playerMana.CurrentMana < initialWeapon.RequiredMana) yield break;
             // The rotation of our projectile.
             Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, currentAttackRotation));
 
@@ -74,6 +76,10 @@ public class PlayerAttack : MonoBehaviour
             // This works because we are rotating the game object when we spawn it in.
             // This means "UP" will always be away from the player.
             projectile.Direction = Vector3.up;
+
+            // Set the projectile's damage to the weapon's damage
+            projectile.Damage = initialWeapon.Damage;
+
             playerMana.UseMana(initialWeapon.RequiredMana);
         }
         playerAnimations.SetAttackAnimation(true);

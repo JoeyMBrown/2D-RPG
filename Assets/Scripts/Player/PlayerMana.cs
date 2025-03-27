@@ -5,13 +5,20 @@ public class PlayerMana : MonoBehaviour
     [Header("Config")]
     [SerializeField] private PlayerStats stats;
 
+    public float CurrentMana { get; private set; }
+  
+    // Initiate CurrentMana to our actual mana on game starts
+    private void Start()
+    {
+        ResetMana();
+    }
+
     public void UseMana(float amount)
     {
-        if (stats.Mana >= amount)
-        {
-            // Ensures we never go negative.
-            stats.Mana = Mathf.Max(stats.Mana -= amount, 0);
-        }
+        // Update CurrentMana whenever we update our stats.
+        // Will check for mana whenever we're attacking, not here.
+        stats.Mana = Mathf.Max(stats.Mana -= amount, 0);
+        CurrentMana = stats.Mana;
     }
 
     private void Update()
@@ -20,5 +27,10 @@ public class PlayerMana : MonoBehaviour
         {
             UseMana(1f);
         }
+    }
+
+    public void ResetMana ()
+    {
+        CurrentMana = stats.MaxMana;
     }
 }

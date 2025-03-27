@@ -26,7 +26,7 @@ public class EnemySelector : MonoBehaviour
     }
 
     // Runs if we're clicking, but not within an enemy layer mask.
-    private void NoSelectionCallback()
+    public void NoSelectionCallback()
     {
         selectorSprite.SetActive(false);
     }

@@ -38,14 +38,16 @@ public class SelectionManager : MonoBehaviour
             {
                 EnemyBrain enemy = hit.collider.GetComponent<EnemyBrain>();
 
-                // If we clicked an enemy
-                // ELSE we clicked something not an enemy.
-                if (enemy != null)
-                {
-                    // Fires an event when an enemy was clicked, passing in
-                    // clicked enemy reference.
-                    OnEnemySelectedEvent?.Invoke(enemy);
-                }
+                // If we didn't select an enemy
+                if (enemy == null) return;
+
+                // If we have an enemy selected, but it's dead, return.
+                EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+                if (enemyHealth.CurrentHealth <= 0) return;
+
+                // Fires an event when an enemy was clicked, passing in
+                // clicked enemy reference.
+                OnEnemySelectedEvent?.Invoke(enemy);
             }
             else
             {
