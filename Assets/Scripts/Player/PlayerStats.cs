@@ -30,6 +30,8 @@ public class PlayerStats : ScriptableObject
     public float CriticalChance;
     public float CriticalDamage;
 
+    [HideInInspector] public float TotalExp;
+    [HideInInspector] public float TotalDamage;
 
     public void ResetPlayerStats()
     {

@@ -37,7 +37,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
-        CurrentWeapon = initialWeapon;
+        EquipWeapon(initialWeapon);
         // Determine if our click atack action was performed,
         // if so, call Attack method within this context?
         actions.Attack.ClickAttack.performed += ctx => Attack();
@@ -123,6 +123,14 @@ public class PlayerAttack : MonoBehaviour
         {
             enemyTarget.GetComponent<IDamageable>().TakeDamage(GetAttackDamage());
         }
+    }
+
+    public void EquipWeapon(Weapon newWeapon)
+    {
+        CurrentWeapon = newWeapon;
+
+        // Total damage is referenced by our stat panel.
+        stats.TotalDamage += stats.BaseDamage + CurrentWeapon.Damage;
     }
 
     private float GetAttackDamage()

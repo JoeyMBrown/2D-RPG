@@ -15,6 +15,8 @@ public class PlayerExp : MonoBehaviour
 
     public void AddExp(float amount)
     {
+        // TotalExp is referenced by our stats panel.
+        stats.TotalExp += amount;
         stats.CurrentExp += amount;
 
         // While loop is actually really smart here - it handles

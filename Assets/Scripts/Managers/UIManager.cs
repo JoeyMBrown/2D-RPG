@@ -18,9 +18,27 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI manaTMP;
     [SerializeField] private TextMeshProUGUI expTMP;
 
+    [Header("Stats Panel")]
+    [SerializeField] private GameObject statsPanel;
+    [SerializeField] private TextMeshProUGUI statLevelTMP;
+    [SerializeField] private TextMeshProUGUI statDamageTMP;
+    [SerializeField] private TextMeshProUGUI statCriticalChanceTMP;
+    [SerializeField] private TextMeshProUGUI statCriticalDamageTMP;
+    [SerializeField] private TextMeshProUGUI statTotalExpTMP;
+    [SerializeField] private TextMeshProUGUI statCurrentExpTMP;
+    [SerializeField] private TextMeshProUGUI statRequiredExpTMP;
+
     private void Update()
     {
         UpdatePlayerUI();   
+    }
+
+    public void ToggleStatsPanel()
+    {
+        statsPanel.SetActive(!statsPanel.activeSelf);
+
+        // If the stats panel is being opened, update it's values.
+        if (statsPanel.activeSelf) UpdateStatsPanel();
     }
 
     private void UpdatePlayerUI()
@@ -48,5 +66,16 @@ public class UIManager : MonoBehaviour
         healthTMP.text = $"{stats.Health}/{stats.MaxHealth}";
         manaTMP.text = $"{stats.Mana}/{stats.MaxMana}";
         expTMP.text = $"{stats.CurrentExp}/{stats.NextLevelExp}";
+    }
+
+    private void UpdateStatsPanel()
+    {
+        statLevelTMP.text = stats.Level.ToString();
+        statDamageTMP.text = stats.TotalDamage.ToString();
+        statCriticalChanceTMP.text = stats.CriticalChance.ToString();
+        statCriticalDamageTMP.text = stats.CriticalDamage.ToString();
+        statTotalExpTMP.text = stats.TotalExp.ToString();
+        statCurrentExpTMP.text = stats.CurrentExp.ToString();
+        statRequiredExpTMP.text = stats.NextLevelExp.ToString();
     }
 }
