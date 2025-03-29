@@ -27,6 +27,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI statTotalExpTMP;
     [SerializeField] private TextMeshProUGUI statCurrentExpTMP;
     [SerializeField] private TextMeshProUGUI statRequiredExpTMP;
+    [SerializeField] private TextMeshProUGUI attributePointsTMP;
+    [SerializeField] private TextMeshProUGUI attributeStrengthTMP;
+    [SerializeField] private TextMeshProUGUI attributeDexterityTMP;
+    [SerializeField] private TextMeshProUGUI attributeIntelligenceTMP;
 
     private void Update()
     {
@@ -77,5 +81,25 @@ public class UIManager : MonoBehaviour
         statTotalExpTMP.text = stats.TotalExp.ToString();
         statCurrentExpTMP.text = stats.CurrentExp.ToString();
         statRequiredExpTMP.text = stats.NextLevelExp.ToString();
+
+        attributePointsTMP.text = $"Points: {stats.AttributePoints}";
+        attributeStrengthTMP.text = stats.Strength.ToString();
+        attributeDexterityTMP.text = stats.Dexterity.ToString();
+        attributeIntelligenceTMP.text = stats.Intelligence.ToString();
+    }
+
+    private void UpgradeCallback()
+    {
+        UpdateStatsPanel();
+    }
+
+    private void OnEnable()
+    {
+        PlayerUpgrade.OnPlayerUpgradeEvent += UpgradeCallback;
+    }
+
+    private void OnDisable()
+    {
+        PlayerUpgrade.OnPlayerUpgradeEvent -= UpgradeCallback;
     }
 }

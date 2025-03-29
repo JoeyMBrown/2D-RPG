@@ -35,6 +35,8 @@ public class PlayerExp : MonoBehaviour
     {
         stats.Level++;
 
+        stats.AttributePoints++;
+
         float previousExpRequired = stats.NextLevelExp;
         float additionalExpForNextLevel = previousExpRequired * (stats.ExpMultiplier / 100);
 
