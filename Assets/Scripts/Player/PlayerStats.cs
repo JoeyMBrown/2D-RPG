@@ -1,5 +1,12 @@
 using UnityEngine;
 
+public enum AttributeType
+{
+    Strength,
+    Dexterity,
+    Intelligence
+}
+
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "Player Stats")]
 
 public class PlayerStats : ScriptableObject
@@ -30,6 +37,12 @@ public class PlayerStats : ScriptableObject
     public float CriticalChance;
     public float CriticalDamage;
 
+    [Header("Attributes")]
+    public int Strength;
+    public int Dexterity;
+    public int Intelligence;
+    public int AttributePoints;
+
     [HideInInspector] public float TotalExp;
     [HideInInspector] public float TotalDamage;
 
@@ -41,5 +54,12 @@ public class PlayerStats : ScriptableObject
         CurrentExp = 0;
         NextLevelExp = InitialNextLevelExp;
         TotalExp = 0;
+        BaseDamage = 2;
+        CriticalChance = 10;
+        CriticalDamage = 50;
+        Strength = 0;
+        Dexterity = 0;
+        Intelligence = 0;
+        AttributePoints = 0;
     }
 }
