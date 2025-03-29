@@ -5,7 +5,7 @@ public class PlayerMana : MonoBehaviour
     [Header("Config")]
     [SerializeField] private PlayerStats stats;
 
-    public float CurrentMana { get; private set; }
+    public float CurrentMana => stats.Mana;
   
     // Initiate CurrentMana to our actual mana on game starts
     private void Start()
@@ -18,7 +18,6 @@ public class PlayerMana : MonoBehaviour
         // Update CurrentMana whenever we update our stats.
         // Will check for mana whenever we're attacking, not here.
         stats.Mana = Mathf.Max(stats.Mana -= amount, 0);
-        CurrentMana = stats.Mana;
     }
 
     private void Update()
@@ -31,6 +30,6 @@ public class PlayerMana : MonoBehaviour
 
     public void ResetMana ()
     {
-        CurrentMana = stats.MaxMana;
+        stats.Mana = stats.MaxMana;
     }
 }

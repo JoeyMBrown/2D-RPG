@@ -130,7 +130,7 @@ public class PlayerAttack : MonoBehaviour
         CurrentWeapon = newWeapon;
 
         // Total damage is referenced by our stat panel.
-        stats.TotalDamage += stats.BaseDamage + CurrentWeapon.Damage;
+        stats.TotalDamage = stats.BaseDamage + CurrentWeapon.Damage;
     }
 
     private float GetAttackDamage()

@@ -44,10 +44,12 @@ public class PlayerStats : ScriptableObject
     public int AttributePoints;
 
     [HideInInspector] public float TotalExp;
-    [HideInInspector] public float TotalDamage;
+    public float TotalDamage;
 
     public void ResetPlayerStats()
     {
+        MaxHealth = 10;
+        MaxMana = 20;
         Health = MaxHealth;
         Mana = MaxMana;
         Level = 1;
