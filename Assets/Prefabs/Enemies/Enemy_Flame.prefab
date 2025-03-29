@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 3386386455037562804}
   - component: {fileID: 7924891160417491508}
   - component: {fileID: 4837998563811856446}
+  - component: {fileID: 5934786633545110484}
+  - component: {fileID: 5778866676031414961}
   m_Layer: 6
   m_Name: Enemy_Flame
   m_TagString: Enemy
@@ -324,6 +326,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectorSprite: {fileID: 5823758280647661688}
+--- !u!114 &5934786633545110484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644733443955355986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+--- !u!114 &5778866676031414961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644733443955355986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f11ba416652f0e4fa093ecd8f3e5279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5823758280647661688
 GameObject:
   m_ObjectHideFlags: 0

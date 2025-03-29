@@ -108,6 +108,8 @@ GameObject:
   - component: {fileID: 1830534248448499948}
   - component: {fileID: 6130367785383133013}
   - component: {fileID: 7524404929724781058}
+  - component: {fileID: 2959276120491357699}
+  - component: {fileID: 229643683930422454}
   m_Layer: 6
   m_Name: Enemy_Reptile
   m_TagString: Enemy
@@ -411,3 +413,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectorSprite: {fileID: 5072947890047234992}
+--- !u!114 &2959276120491357699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477396910559617705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+--- !u!114 &229643683930422454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477396910559617705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f11ba416652f0e4fa093ecd8f3e5279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

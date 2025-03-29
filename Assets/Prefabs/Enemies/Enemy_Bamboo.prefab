@@ -107,6 +107,8 @@ GameObject:
   - component: {fileID: 7014821574812106867}
   - component: {fileID: 7411480528869248149}
   - component: {fileID: 1984097700931443451}
+  - component: {fileID: 2384435328769149181}
+  - component: {fileID: 8943700232536154814}
   m_Layer: 6
   m_Name: Enemy_Bamboo
   m_TagString: Enemy
@@ -398,3 +400,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectorSprite: {fileID: 1886372196511204612}
+--- !u!114 &2384435328769149181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8158298591802584497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8a677415be2e3409df2060eed8626a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+--- !u!114 &8943700232536154814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8158298591802584497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f11ba416652f0e4fa093ecd8f3e5279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
