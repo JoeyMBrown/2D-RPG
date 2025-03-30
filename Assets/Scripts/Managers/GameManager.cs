@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Player player;
 
+    public Player Player => player;
+
     private void Awake()
     {
         // This is singleton pattern being used.

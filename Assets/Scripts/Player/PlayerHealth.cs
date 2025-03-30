@@ -43,6 +43,19 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         return stats.Health > 0f;
     }
 
+    public void RestoreHealth(float amount)
+    {
+        stats.Health += amount;
+
+        if (stats.Health > stats.MaxHealth) stats.Health = stats.MaxHealth;
+    }
+
+    // Returns whether or not the player is missing health, but not dead.
+    public bool IsInjured()
+    {
+        return stats.Health > 0 && stats.Health < stats.MaxHealth;
+    }
+
     private void PlayerDead()
     {
         playerAnimations.SetDeadAnimation();

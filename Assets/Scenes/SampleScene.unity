@@ -12529,6 +12529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: f47a6c1469da54a44b0f470432753879, type: 2}
+  HealthPotion: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
 --- !u!114 &966011616
 MonoBehaviour:
   m_ObjectHideFlags: 0
