@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349d9f2dd4184b04eadafc616a12fe0d, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  Level: 7
-  Health: 23
-  MaxHealth: 23
-  Mana: 45
-  MaxMana: 45
-  CurrentExp: 180
-  NextLevelExp: 760
+  Level: 1
+  Health: 10
+  MaxHealth: 10
+  Mana: 20
+  MaxMana: 20
+  CurrentExp: 0
+  NextLevelExp: 100
   InitialNextLevelExp: 100
   ExpMultiplier: 50
-  BaseDamage: 7
-  CriticalChance: 14
-  CriticalDamage: 52.5
+  BaseDamage: 2
+  CriticalChance: 10
+  CriticalDamage: 50
   Strength: 0
-  Dexterity: 2
-  Intelligence: 3
+  Dexterity: 0
+  Intelligence: 0
   AttributePoints: 0
-  TotalExp: 1500
-  TotalDamage: 32
+  TotalExp: 0
+  TotalDamage: 4
