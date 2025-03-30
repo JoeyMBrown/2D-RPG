@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         stats.Health += amount;
 
-        if (stats.Health > stats.MaxHealth) stats.Health = stats.MaxHealth;
+        stats.Health = Mathf.Min(stats.Health, stats.MaxHealth);
     }
 
     // Returns whether or not the player is missing health, but not dead.

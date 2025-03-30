@@ -28,6 +28,20 @@ public class PlayerMana : MonoBehaviour
         }
     }
 
+    public void RestoreMana(float amount)
+    {
+        stats.Mana += amount;
+
+        // Set to either current mana, or maximum, whichever
+        // is smaller.
+        stats.Mana = Mathf.Min(stats.Mana, stats.MaxMana);
+    }
+
+    public bool IsMissingMana()
+    {
+        return stats.Mana >= 0 && stats.Mana < stats.MaxMana;
+    }
+
     public void ResetMana ()
     {
         stats.Mana = stats.MaxMana;

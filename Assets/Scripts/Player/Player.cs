@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 
     [Header("Test")]
     public ItemHealthPotion HealthPotion;
+    public ItemManaPotion ManaPotion;
 
     public PlayerMana PlayerMana { get; private set; }
 
@@ -27,12 +28,12 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            if (HealthPotion.UseItem())
+            if (ManaPotion.UseItem())
             {
-                Debug.Log("Using Health Potion");
+                Debug.Log("Using Mana Potion");
             } else
             {
-                Debug.Log("Unable to use Health Potion.");
+                Debug.Log("Unable to use Mana Potion.");
             }
         }
     }
