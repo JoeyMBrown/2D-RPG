@@ -10,9 +10,9 @@ public class ItemHealthPotion : InventoryItem
     // then return true so we can destroy 1 health potion
     public override bool UseItem()
     {
-        if (GameManager.instance.Player.PlayerHealth.IsInjured())
+        if (GameManager.Instance.Player.PlayerHealth.IsInjured())
         {
-            GameManager.instance.Player.PlayerHealth.RestoreHealth(HealthValue);
+            GameManager.Instance.Player.PlayerHealth.RestoreHealth(HealthValue);
             Debug.Log(HealthValue.ToString());
             return true;
         }

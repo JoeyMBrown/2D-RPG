@@ -60,6 +60,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         OnEnemyDeadEvent?.Invoke();
 
         // Use gameManager singleton to grant player exp based on enemy exp drop.
-        GameManager.instance.AddPlayerExp(enemyLoot.ExpDrop);
+        GameManager.Instance.AddPlayerExp(enemyLoot.ExpDrop);
     }
 }

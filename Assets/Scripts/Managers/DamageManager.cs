@@ -1,17 +1,9 @@
 using UnityEngine;
 
-public class DamageManager : MonoBehaviour
+public class DamageManager : Singleton<DamageManager>
 {
-    // Singleton pattern being used here.
-    public static DamageManager Instance;
-
     [Header("Config")]
     [SerializeField] private DamageText damageTextPrefab;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     // When this is called, we will instantiate a damageTextPrefab
     // at the parent's position.

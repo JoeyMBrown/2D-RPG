@@ -10,9 +10,9 @@ public class ItemManaPotion : InventoryItem
     {
         // if player is missing mana, we can use this item to restore
         // mana amount, else we can't.
-        if (GameManager.instance.Player.PlayerMana.IsMissingMana())
+        if (GameManager.Instance.Player.PlayerMana.IsMissingMana())
         {
-            GameManager.instance.Player.PlayerMana.RestoreMana(ManaValue);
+            GameManager.Instance.Player.PlayerMana.RestoreMana(ManaValue);
             return true;
         }
 
