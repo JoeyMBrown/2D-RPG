@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0734aba142b9704893ee66b70a3c7ab, type: 3}
+  m_Name: ItemWeapon_Bone
+  m_EditorClassIdentifier: 
+  ID: WeaponBone
+  Name: Bone
+  Icon: {fileID: 21300000, guid: a6a3a8d76f318f347820e544612b067c, type: 3}
+  Description: A small bone that has been sharpened to a point.
+  ItemType: 0
+  IsConsumable: 0
+  IsStackable: 0
+  MaxStack: 1
+  Quantity: 0
+  Weapon: {fileID: 11400000, guid: c8c134326ab9b884fb3f348b732d628d, type: 2}
