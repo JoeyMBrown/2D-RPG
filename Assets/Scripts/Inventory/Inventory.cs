@@ -38,6 +38,18 @@ public class Inventory : Singleton<Inventory>
         }
     }
 
+    // Remove reference of object, then redraw the
+    // UI.
+    public void RemoveItem(int index)
+    {
+        if (inventoryItems[index] == null) return;
+
+        // Call the individual item's RemoveItem method.
+        inventoryItems[index].RemoveItem();
+        inventoryItems[index] = null;
+        InventoryUI.Instance.DrawItem(null, index);
+    }
+
     // This method looks for a free slot and adds the given item to that slot.
     private void AddItemFreeSlot(InventoryItem item, int quantity)
     {

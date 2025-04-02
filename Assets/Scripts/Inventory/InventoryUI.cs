@@ -37,7 +37,16 @@ public class InventoryUI : Singleton<InventoryUI>
     // we will try to use selected item.
     public void UseItem()
     {
+        if (CurrentSlot == null) return;
+
         Inventory.Instance.UseItem(CurrentSlot.Index);
+    }
+
+    public void RemoveItem()
+    {
+        if (CurrentSlot == null) return;
+
+        Inventory.Instance.RemoveItem(CurrentSlot.Index);
     }
 
     // Here we update a specific slot's item image and
