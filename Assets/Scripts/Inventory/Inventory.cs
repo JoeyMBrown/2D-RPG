@@ -15,20 +15,33 @@ public class Inventory : Singleton<Inventory>
     private void Start()
     {
         inventoryItems = new InventoryItem[inventorySize];
+        VerifyItemsForDraw();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            AddItem(testItem, 30);
+            AddItem(testItem, 2);
+        }
+    }
+
+    public void UseItem(int index)
+    {
+        if (inventoryItems[index] == null) return;
+
+        // If we were able to use our item, decrease quantity
+        // by 1.
+        if (inventoryItems[index].UseItem())
+        {
+            DecreaseItemQuantity(index);
         }
     }
 
     // This method looks for a free slot and adds the given item to that slot.
     private void AddItemFreeSlot(InventoryItem item, int quantity)
     {
-        for (int i = 0; i< inventorySize; i++)
+        for (int i = 0; i < inventorySize; i++)
         {
             // If there is an item in the current slot continue.
             if (inventoryItems[i] != null) continue;
@@ -101,6 +114,29 @@ public class Inventory : Singleton<Inventory>
         }
     }
 
+    // Here we can decrease an item's quantity, and if
+    // we detect that the quantity is 0 or less than 0
+    // we can remove the item from our inventory
+    // while also calling the draw method which will
+    // visually remove it from our inventory.
+    private void DecreaseItemQuantity(int index)
+    {
+        InventoryItem item = inventoryItems[index];
+
+        item.Quantity--;
+
+        if (item.Quantity <= 0)
+        {
+            item = null;
+            InventoryUI.Instance.DrawItem(null, index);
+        }
+        else
+        {
+            // Update drawn UI to reflect to quantity.
+            InventoryUI.Instance.DrawItem(item, index);
+        }
+    }
+
     // This method will return all inventory slots containing
     // the same item as the item passed in.
     private List<int> CheckItemStock(string itemID)
@@ -119,5 +155,19 @@ public class Inventory : Singleton<Inventory>
         }
 
         return itemIndexes;
+    }
+
+    // Hide slot information if (sprite / quantity text) for all
+    // slots that do not contain an item
+    private void VerifyItemsForDraw()
+    {
+        for (int i = 0; i < inventorySize; i++)
+        {
+
+            if (inventoryItems[i] == null)
+            {
+                InventoryUI.Instance.DrawItem(null, i);
+            }
+        }
     }
 }
