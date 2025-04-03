@@ -49,6 +49,16 @@ public class InventoryUI : Singleton<InventoryUI>
         Inventory.Instance.RemoveItem(CurrentSlot.Index);
     }
 
+    // For equip button in inventory screen.  when clicked,
+    // we will call the inventory instance's equip item method
+    // and pass in reference to the current selected slot.
+    public void EquipItem()
+    {
+        if (CurrentSlot == null) return;
+
+        Inventory.Instance.EquipItem(CurrentSlot.Index);
+    }
+
     // Here we update a specific slot's item image and
     // item quantity using UpdateSlot, we then toggle
     // the image and quantity UI to show.  If the item

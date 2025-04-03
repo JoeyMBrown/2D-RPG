@@ -9,4 +9,10 @@ public class ItemWeapon : InventoryItem
 {
     [Header("Weapon")]
     public Weapon Weapon;
+
+    // Call equip weapon and pass in the Weapon property
+    public override void EquipItem()
+    {
+        WeaponManager.Instance.EquipWeapon(Weapon);
+    }
 }

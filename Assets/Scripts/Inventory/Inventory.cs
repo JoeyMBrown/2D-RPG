@@ -22,7 +22,7 @@ public class Inventory : Singleton<Inventory>
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            AddItem(testItem, 2);
+            AddItem(testItem, 1);
         }
     }
 
@@ -48,6 +48,14 @@ public class Inventory : Singleton<Inventory>
         inventoryItems[index].RemoveItem();
         inventoryItems[index] = null;
         InventoryUI.Instance.DrawItem(null, index);
+    }
+
+    public void EquipItem(int index)
+    {
+        if (inventoryItems[index] == null) return;
+        if (inventoryItems[index].ItemType != ItemType.Weapon) return;
+
+        inventoryItems[index].EquipItem();
     }
 
     // This method looks for a free slot and adds the given item to that slot.

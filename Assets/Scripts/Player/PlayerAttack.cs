@@ -37,7 +37,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
-        EquipWeapon(initialWeapon);
+        WeaponManager.Instance.EquipWeapon(initialWeapon);
         // Determine if our click atack action was performed,
         // if so, call Attack method within this context?
         actions.Attack.ClickAttack.performed += ctx => Attack();

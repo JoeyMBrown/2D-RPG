@@ -15,12 +15,15 @@ public class Player : MonoBehaviour
 
     public PlayerHealth PlayerHealth { get; private set; }
 
+    public PlayerAttack PlayerAttack { get; private set; }
+
     private PlayerAnimations animations;
 
     private void Awake()
     {
         PlayerMana = GetComponent<PlayerMana>();
         PlayerHealth = GetComponent<PlayerHealth>();
+        PlayerAttack = GetComponent<PlayerAttack>();
         animations = GetComponent<PlayerAnimations>();
     }
 

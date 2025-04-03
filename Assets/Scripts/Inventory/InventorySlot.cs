@@ -27,6 +27,9 @@ public class InventorySlot : MonoBehaviour
     {
         itemIcon.sprite = item.Icon;
         itemQuantityTMP.text = item.Quantity.ToString();
+        // This line uses the native size of the icon instead of
+        // scaling it automatically.
+        itemIcon.SetNativeSize();
     }
 
     // This will toggle whether or not the slot
