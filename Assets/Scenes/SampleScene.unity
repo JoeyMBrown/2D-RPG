@@ -714,7 +714,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: -5
-  m_wordSpacing: -10
+  m_wordSpacing: 20
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -14229,6 +14229,10 @@ MonoBehaviour:
   inventoryPanel: {fileID: 2118773269}
   slotPrefab: {fileID: 1614911296353769551, guid: 1644ab3510ef29a4c99fbbb895efd8b0, type: 3}
   container: {fileID: 396108176}
+  descriptionPanel: {fileID: 1903239421}
+  itemIcon: {fileID: 976002738}
+  itemNameTMP: {fileID: 101351396}
+  itemDescriptionTMP: {fileID: 1091947415}
 --- !u!1001 &1037926576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14771,12 +14775,12 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: -5
-  m_wordSpacing: -10
+  m_wordSpacing: 20
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}

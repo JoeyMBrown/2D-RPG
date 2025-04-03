@@ -12,6 +12,8 @@ public class Inventory : Singleton<Inventory>
 
     public int InventorySize => inventorySize;
 
+    public InventoryItem[] InventoryItems => inventoryItems;
+
     private void Start()
     {
         inventoryItems = new InventoryItem[inventorySize];

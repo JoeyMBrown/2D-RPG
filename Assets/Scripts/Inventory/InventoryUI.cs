@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : Singleton<InventoryUI>
 {
@@ -7,6 +9,12 @@ public class InventoryUI : Singleton<InventoryUI>
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private InventorySlot slotPrefab;
     [SerializeField] private Transform container;
+
+    [Header("Description Panel")]
+    [SerializeField] private GameObject descriptionPanel;
+    [SerializeField] private Image itemIcon;
+    [SerializeField] private TextMeshProUGUI itemNameTMP;
+    [SerializeField] private TextMeshProUGUI itemDescriptionTMP;
 
     public InventorySlot CurrentSlot { get; private set; }
 
@@ -79,16 +87,35 @@ public class InventoryUI : Singleton<InventoryUI>
         slot.ShowSlotInformation(true);
     }
 
+    public void ShowItemDescription(int index)
+    {
+        if (Inventory.Instance.InventoryItems[index] == null) return;
+
+        descriptionPanel.SetActive(true);
+        itemIcon.sprite = Inventory.Instance.InventoryItems[index].Icon;
+        itemNameTMP.text = Inventory.Instance.InventoryItems[index].Name;
+        itemDescriptionTMP.text = Inventory.Instance.InventoryItems[index].Description;
+    }
+
     public void ToggleInventory()
     {
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+
+        // If we close the inventory, we also want to close the description panel.
+        if (inventoryPanel.activeSelf == false)
+        {
+            descriptionPanel.SetActive(false);
+            CurrentSlot = null;
+        }
     }
 
     // When slot event is distpached, set the current slot
-    // to the slot that was selected.
+    // to the slot that was selected, and show the item
+    // description for the selected item.
     private void SlotSelectedCallback(int slotIndex)
     {
         CurrentSlot = slotList[slotIndex];
+        ShowItemDescription(slotIndex);
     }
 
     private void OnEnable()
