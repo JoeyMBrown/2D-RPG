@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : Singleton<Inventory>
 {
     [Header("Config")]
+    [SerializeField] private GameContent gameContent;
     [SerializeField] private int inventorySize;
     [SerializeField] private InventoryItem[] inventoryItems;
 
@@ -21,6 +22,7 @@ public class Inventory : Singleton<Inventory>
     {
         inventoryItems = new InventoryItem[inventorySize];
         VerifyItemsForDraw();
+        LoadInventory();
     }
 
     private void Update()
@@ -199,6 +201,54 @@ public class Inventory : Singleton<Inventory>
             if (inventoryItems[i] == null)
             {
                 InventoryUI.Instance.DrawItem(null, i);
+            }
+        }
+    }
+
+    private InventoryItem ItemExistsInGameContent (string itemID)
+    {
+        for (int i = 0; i < gameContent.GameItems.Length; i++)
+        {
+            if (gameContent.GameItems[i].ID == itemID)
+            {
+                return gameContent.GameItems[i];
+            }
+        }
+
+        return null;
+    }
+
+    private void LoadInventory()
+    {
+        // check to see if there is existing data saved under
+        // this key.
+        if (SaveGame.Exists(INVENTORY_KEY_DATA))
+        {
+            // Save data stored with the provided key into this variable.
+            InventoryData loadData = SaveGame.Load<InventoryData>(INVENTORY_KEY_DATA);
+
+            for (int i = 0; i < inventorySize; i ++)
+            {
+                // Loop over saved data
+                if (loadData.ItemContent[i] != null)
+                {
+                    // If current index is an item, verify that it exists as an item within our game.
+                    InventoryItem itemFromContent = ItemExistsInGameContent(loadData.ItemContent[i]);
+                    // If item exists, create an isntance of it inside of our inventory
+                    // at the current position, and update the quantity.  Then
+                    // We'll draw the item's image in quantity in the inventory tile.
+                    if (itemFromContent != null)
+                    {
+                        inventoryItems[i] = itemFromContent.CopyItem();
+                        inventoryItems[i].Quantity = loadData.ItemQuantity[i];
+                        InventoryUI.Instance.DrawItem(inventoryItems[i], i);
+                    }
+                }
+                else
+                {
+                    // We don't have anything in this index.
+                    inventoryItems[i] = null;
+                }
             }
         }
     }
