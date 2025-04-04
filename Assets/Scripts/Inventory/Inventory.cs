@@ -1,3 +1,4 @@
+using BayatGames.SaveGameFree;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,8 @@ public class Inventory : Singleton<Inventory>
     public int InventorySize => inventorySize;
 
     public InventoryItem[] InventoryItems => inventoryItems;
+
+    private readonly string INVENTORY_KEY_DATA = "MY_INVENTORY";
 
     private void Start()
     {
@@ -37,11 +40,12 @@ public class Inventory : Singleton<Inventory>
         if (inventoryItems[index].UseItem())
         {
             DecreaseItemQuantity(index);
+            SaveInventory();
         }
     }
 
     // Remove reference of object, then redraw the
-    // UI.
+    // UI, save inventory.
     public void RemoveItem(int index)
     {
         if (inventoryItems[index] == null) return;
@@ -50,6 +54,8 @@ public class Inventory : Singleton<Inventory>
         inventoryItems[index].RemoveItem();
         inventoryItems[index] = null;
         InventoryUI.Instance.DrawItem(null, index);
+
+        SaveInventory();
     }
 
     public void EquipItem(int index)
@@ -114,6 +120,8 @@ public class Inventory : Singleton<Inventory>
 
                     // Draw the item within the slot at the given index.
                     InventoryUI.Instance.DrawItem(inventoryItems[index], index);
+
+                    SaveInventory();
                     return;
                 }
             }
@@ -134,6 +142,8 @@ public class Inventory : Singleton<Inventory>
         {
             AddItemFreeSlot(item, remainingAmount);
         }
+
+        SaveInventory();
     }
 
     // Here we can decrease an item's quantity, and if
@@ -191,5 +201,31 @@ public class Inventory : Singleton<Inventory>
                 InventoryUI.Instance.DrawItem(null, i);
             }
         }
+    }
+
+    private void SaveInventory()
+    {
+        InventoryData saveData = new InventoryData();
+
+        // Create the itemContent and itemQuantity array with a size of inventorySize
+        saveData.ItemContent = new string[inventorySize];
+        saveData.ItemQuantity = new int[inventorySize];
+
+        for (int i = 0; i < inventorySize; i++)
+        {
+            if (inventoryItems[i] == null)
+            {
+                saveData.ItemContent[i] = null;
+                saveData.ItemQuantity[i] = 0;
+            }
+            else
+            {
+                saveData.ItemContent[i] = inventoryItems[i].ID;
+                saveData.ItemQuantity[i] = (int)inventoryItems[i].Quantity;
+            }
+        }
+
+        // Use package to store inventory IDs and Quantities with the specified key
+        SaveGame.Save(INVENTORY_KEY_DATA, saveData);
     }
 }
