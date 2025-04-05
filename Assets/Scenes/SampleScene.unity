@@ -42774,7 +42774,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
       propertyPath: expDrop
-      value: 300
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7951ab5256529194eb27b972393f734a, type: 2}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Gold Coin x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Health Potion x1 - 10%
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Wand x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: d094a6ce38ebe0b439ce371de67f42e5, type: 2}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Silver Coin x10 - 50%
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017784458825436835, guid: 310423f874ba72a4496ac6ef811e2f47, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -42835,7 +42903,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
       propertyPath: expDrop
-      value: 300
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7951ab5256529194eb27b972393f734a, type: 2}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Gold Coin x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Health Potion x1 - 10%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Wand x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: d094a6ce38ebe0b439ce371de67f42e5, type: 2}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Silver Coin x10 - 50%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943700232536154814, guid: 76bbf159cb7d1f841bd194c2cf9b1d0b, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -42898,6 +43034,74 @@ PrefabInstance:
       propertyPath: expDrop
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7951ab5256529194eb27b972393f734a, type: 2}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Gold Coin x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Health Potion x1 - 10%
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Wand x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: d094a6ce38ebe0b439ce371de67f42e5, type: 2}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Silver Coin x10 - 50%
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42913,7 +43117,75 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
       propertyPath: expDrop
-      value: 300
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7951ab5256529194eb27b972393f734a, type: 2}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Gold Coin x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Health Potion x1 - 10%
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Wand x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: d094a6ce38ebe0b439ce371de67f42e5, type: 2}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Silver Coin x10 - 50%
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 544449190579387043, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43020,6 +43292,74 @@ PrefabInstance:
       propertyPath: expDrop
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7951ab5256529194eb27b972393f734a, type: 2}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Gold Coin x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Health Potion x1 - 10%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Wand x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: d094a6ce38ebe0b439ce371de67f42e5, type: 2}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Silver Coin x10 - 50%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43086,6 +43426,74 @@ PrefabInstance:
       propertyPath: expDrop
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7951ab5256529194eb27b972393f734a, type: 2}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Gold Coin x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Health Potion x1 - 10%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Wand x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: d094a6ce38ebe0b439ce371de67f42e5, type: 2}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Silver Coin x10 - 50%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43145,7 +43553,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
       propertyPath: expDrop
-      value: 300
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7951ab5256529194eb27b972393f734a, type: 2}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Gold Coin x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Health Potion x1 - 10%
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Wand x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: d094a6ce38ebe0b439ce371de67f42e5, type: 2}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Silver Coin x10 - 50%
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43167,6 +43643,74 @@ PrefabInstance:
     - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: expDrop
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7951ab5256529194eb27b972393f734a, type: 2}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Gold Coin x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Health Potion x1 - 10%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Wand x1 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: d094a6ce38ebe0b439ce371de67f42e5, type: 2}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Silver Coin x10 - 50%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9163779095345880748, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: m_LocalPosition.x
