@@ -15,9 +15,11 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     public float CurrentHealth { get; set; }
 
     private Animator animator;
+    private Rigidbody2D rb2D;
 
     private void Awake()
     {
+        rb2D = GetComponent<Rigidbody2D>();
         enemyBrain = GetComponent<EnemyBrain>();
         animator = GetComponent<Animator>();
         enemySelector = GetComponent<EnemySelector>();
@@ -55,7 +57,11 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         enemySelector.NoSelectionCallback();
         // Updating the enemys layer to "Ignore Raycast".  This will
         // stop projectiles from colliding with it.
-        gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+        // UPDATE: This was deprecated in favor of modifying our
+        // enemies rigid body type.  This allows us to still detect
+        // enemy clicked for looting, while avoiding projectile collisions.
+        // gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+        rb2D.bodyType = RigidbodyType2D.Static;
         // Fire enemy dead event.
         OnEnemyDeadEvent?.Invoke();
 

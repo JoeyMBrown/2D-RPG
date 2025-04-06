@@ -41,13 +41,19 @@ public class SelectionManager : MonoBehaviour
                 // If we didn't select an enemy
                 if (enemy == null) return;
 
-                // If we have an enemy selected, but it's dead, return.
+                // If we have an enemy selected, but it's dead, open the loot panel.
                 EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-                if (enemyHealth.CurrentHealth <= 0) return;
-
-                // Fires an event when an enemy was clicked, passing in
-                // clicked enemy reference.
-                OnEnemySelectedEvent?.Invoke(enemy);
+                if (enemyHealth.CurrentHealth <= 0)
+                {
+                    EnemyLoot enemyLoot = enemy.GetComponent<EnemyLoot>();
+                    LootManager.Instance.ShowLoot(enemyLoot);
+                }
+                else
+                {
+                    // Fires an event when an enemy was clicked, passing in
+                    // clicked enemy reference.
+                    OnEnemySelectedEvent?.Invoke(enemy);
+                }
             }
             else
             {
