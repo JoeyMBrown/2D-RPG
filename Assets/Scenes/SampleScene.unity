@@ -44497,10 +44497,10 @@ PrefabInstance:
     - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
       propertyPath: dropItems.Array.data[2].Item
       value: 
-      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+      objectReference: {fileID: 11400000, guid: 6b4c5f7b59bf24944985f3f8840fb425, type: 2}
     - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
       propertyPath: dropItems.Array.data[2].Name
-      value: Wand x1 - 100%
+      value: Book x1 - 100%
       objectReference: {fileID: 0}
     - target: {fileID: 9126721162821397323, guid: ff18fe2320f89414690b4ea85f25e9af, type: 3}
       propertyPath: dropItems.Array.data[3].Item
@@ -44582,10 +44582,10 @@ PrefabInstance:
     - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
       propertyPath: dropItems.Array.data[2].Item
       value: 
-      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+      objectReference: {fileID: 11400000, guid: a85520aae48181f46bd2f875bfb121de, type: 2}
     - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
       propertyPath: dropItems.Array.data[2].Name
-      value: Wand x1 - 100%
+      value: Bone x1 - 100%
       objectReference: {fileID: 0}
     - target: {fileID: 229643683930422454, guid: fd5e08a308f7bb84eb81d692222b353a, type: 3}
       propertyPath: dropItems.Array.data[3].Item
@@ -44856,10 +44856,10 @@ PrefabInstance:
     - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
       propertyPath: dropItems.Array.data[2].Item
       value: 
-      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+      objectReference: {fileID: 11400000, guid: 8bd5732e5ddee6c4f880ae5cf6b97459, type: 2}
     - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
       propertyPath: dropItems.Array.data[2].Name
-      value: Wand x1 - 100%
+      value: Hammer x1 - 100%
       objectReference: {fileID: 0}
     - target: {fileID: 8024400060037884644, guid: 1112571825182864e8f942b2234136a4, type: 3}
       propertyPath: dropItems.Array.data[3].Item
@@ -44990,10 +44990,10 @@ PrefabInstance:
     - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
       propertyPath: dropItems.Array.data[2].Item
       value: 
-      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+      objectReference: {fileID: 11400000, guid: 35b73a3f1efcdbb46a8217405942cee0, type: 2}
     - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
       propertyPath: dropItems.Array.data[2].Name
-      value: Wand x1 - 100%
+      value: Pickaxe x1 - 100%
       objectReference: {fileID: 0}
     - target: {fileID: 5413576577808572996, guid: 19510e2a56eee9446aa2a21eca684a10, type: 3}
       propertyPath: dropItems.Array.data[3].Item
@@ -45119,10 +45119,10 @@ PrefabInstance:
     - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
       propertyPath: dropItems.Array.data[2].Item
       value: 
-      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+      objectReference: {fileID: 11400000, guid: 4092c2555702a524fa8fc28dfa332f6f, type: 2}
     - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
       propertyPath: dropItems.Array.data[2].Name
-      value: Wand x1 - 100%
+      value: Bow x1 - 100%
       objectReference: {fileID: 0}
     - target: {fileID: 7867125310260184899, guid: a7d813416ebd91843ad2bd960ccd8f01, type: 3}
       propertyPath: dropItems.Array.data[3].Item
@@ -45208,10 +45208,10 @@ PrefabInstance:
     - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: dropItems.Array.data[2].Item
       value: 
-      objectReference: {fileID: 11400000, guid: 3854c8e123df79e4594530ef72a3d42e, type: 2}
+      objectReference: {fileID: 11400000, guid: effba8a3e5425cf4ab811c45a471bade, type: 2}
     - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: dropItems.Array.data[2].Name
-      value: Wand x1 - 100%
+      value: Sword x1 - 100%
       objectReference: {fileID: 0}
     - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: dropItems.Array.data[3].Item

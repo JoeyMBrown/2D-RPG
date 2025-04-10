@@ -15,4 +15,9 @@ public class ItemWeapon : InventoryItem
     {
         WeaponManager.Instance.EquipWeapon(Weapon);
     }
+     
+    public override bool UseItem()
+    {
+        return false;
+    }
 }
