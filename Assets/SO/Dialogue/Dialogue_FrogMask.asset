@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b507cda5bcf188a4187d7ccb8f5e364a, type: 3}
+  m_Name: Dialogue_FrogMask
+  m_EditorClassIdentifier: 
+  Name: Mysterious Frog Man
+  Icon: {fileID: 21300000, guid: 0b8ff005787528b49a18247ca928bec4, type: 3}
+  HasInteraction: 0
+  InterationType: 0
+  Greeting: I eventually will need your help...
+  Dialogue:
+  - What?  I said eventually... come back later, loser.
