@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Mysterious Frog Man
   Icon: {fileID: 21300000, guid: 0b8ff005787528b49a18247ca928bec4, type: 3}
-  HasInteraction: 0
+  HasInteraction: 1
   InterationType: 0
   Greeting: I eventually will need your help...
   Dialogue:
-  - What?  I said eventually... come back later, loser.
+  - Looking for some work?
+  - I've got some work that needs done around here, take a look.
