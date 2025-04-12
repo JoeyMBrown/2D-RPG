@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -5,6 +6,10 @@ using UnityEngine.UI;
 
 public class DialogueManager : Singleton<DialogueManager>
 {
+    // We can fire this event anytime the player interacts with an NPC
+    // that has an interaction type.
+    public static event Action<InteractionType> OnExtraInteractionEvent;
+
     [Header("Config")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private Image npcIcon;
@@ -83,6 +88,12 @@ public class DialogueManager : Singleton<DialogueManager>
         {
             CloseDialoguePanel();
             dialogueStarted = false;
+            if (NPCSelected.DialogueToShow.HasInteraction)
+            {
+                // If this npc has an interaction type, fire this event and pass in the
+                // type.
+                OnExtraInteractionEvent?.Invoke(NPCSelected.DialogueToShow.InteractionType);
+            }
             return;
         }
 

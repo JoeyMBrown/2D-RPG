@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum InterationType
+public enum InteractionType
 {
     Quest,
     Shop
@@ -15,7 +15,7 @@ public class NPCDialogue : ScriptableObject
 
     [Header("Interaction")]
     public bool HasInteraction;
-    public InterationType InterationType;
+    public InteractionType InteractionType;
 
     [Header("Dialogue")]
     public string Greeting;
