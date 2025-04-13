@@ -33,7 +33,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI attributeIntelligenceTMP;
 
     [Header("Extra Panels")]
-    [SerializeField] private GameObject npcQestPanel;
+    [SerializeField] private GameObject npcQuestPanel;
+    [SerializeField] private GameObject playerQuestPanel;
 
     private void Update()
     {
@@ -50,7 +51,12 @@ public class UIManager : MonoBehaviour
 
     public void ToggleNPCQuestPanel(bool value)
     {
-        npcQestPanel.SetActive(value);
+        npcQuestPanel.SetActive(value);
+    }
+
+    public void TogglePlayerQuestPanel(bool value)
+    {
+        playerQuestPanel.SetActive(value);
     }
 
     private void UpdatePlayerUI()

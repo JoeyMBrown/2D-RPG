@@ -13,4 +13,12 @@ public class QuestCardNPC : QuestCard
             $"-{quest.ExpReward} Exp\n" +
             $"-x{quest.ItemReward.Quantity} {quest.ItemReward.Item.Name}";
     }
+
+    public void AcceptQuest()
+    {
+        if (QuestToComplete == null) return;
+        QuestToComplete.QuestAccepted = true;
+        QuestManager.Instance.AcceptQuest(QuestToComplete);
+        gameObject.SetActive(false);
+    }
 }
