@@ -39,6 +39,10 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         if (CurrentHealth <= 0) 
         {
             DisableEnemy();
+            // Very specific implementation of progressing a quest.
+            // I think dispatching an enemy death event would
+            // make more sense.
+            QuestManager.Instance.AddProgress("Kill10Enemy", 1);
         }
         else
         {

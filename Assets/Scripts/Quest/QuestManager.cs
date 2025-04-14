@@ -24,6 +24,31 @@ public class QuestManager : Singleton<QuestManager>
         cardPlayer.ConfigQuestUI(quest);
     }
 
+    private Quest QuestExists(string questID)
+    {
+        foreach (Quest quest in quests)
+        {
+            if (quest.ID == questID)
+            {
+                return quest;
+            }
+        }
+
+        return null;
+    }
+
+    public void AddProgress(string questID, int amount)
+    {
+        Quest quest = QuestExists(questID);
+
+        if (quest == null) return;
+
+        if (quest.QuestAccepted)
+        {
+            quest.AddProgress(amount);
+        }
+    }
+
     // Create an npcCard for each one of our quests in our quests array
     // Set quests to complete, name and description on QuestCard panel.
     private void LoadQuestsIntoNPCPanel()
@@ -33,6 +58,15 @@ public class QuestManager : Singleton<QuestManager>
             QuestCard npcCard = Instantiate(questCardNpcPrefab, npcPanelContainer);
 
             npcCard.ConfigQuestUI(quests[i]);
+        }
+    }
+
+    // On startup we're going to reset all quests.
+    private void OnEnable()
+    {
+        for (int i = 0; i < quests.Length; i ++)
+        {
+            quests[i].ResetQuest();
         }
     }
 }
