@@ -13,6 +13,9 @@ public class QuestCardPlayer : QuestCard
     [SerializeField] private Image itemIcon;
     [SerializeField] private TextMeshProUGUI itemQuantityTMP;
 
+    [Header("Quest Completed")]
+    [SerializeField] private GameObject claimButton;
+    [SerializeField] private GameObject rewardsPanel;
 
     private void Update()
     {
@@ -27,5 +30,31 @@ public class QuestCardPlayer : QuestCard
 
         itemIcon.sprite = quest.ItemReward.Item.Icon;
         itemQuantityTMP.text = quest.ItemReward.Quantity.ToString();
+    }
+
+    private void QuestCompletedCheck()
+    {
+        if(QuestToComplete.QuestCompleted)
+        {
+            claimButton.SetActive(true);
+            rewardsPanel.SetActive(false);
+        }
+    }
+
+    // Divvy out rewards, and then disable this quest card.
+    public void ClaimQuest()
+    {
+        GameManager.Instance.AddPlayerExp(QuestToComplete.ExpReward);
+        Inventory.Instance.AddItem(QuestToComplete.ItemReward.Item, QuestToComplete.ItemReward.Quantity);
+        CoinManager.Instance.AddCoins(QuestToComplete.GoldReward);
+        gameObject.SetActive(false);
+    }
+
+    // Whenever the Quest Card Player is enabled, we can check if 
+    // our quest is completed or not.  If it is, we can show the
+    // claim button, and hide the reward panel.
+    private void OnEnable()
+    {
+        QuestCompletedCheck();
     }
 }

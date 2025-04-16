@@ -1778,6 +1778,7 @@ Transform:
   - {fileID: 1487035811}
   - {fileID: 1743469490}
   - {fileID: 487960209}
+  - {fileID: 1466972854}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &205532066
@@ -11322,6 +11323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quests:
+  - {fileID: 11400000, guid: b02e2fa1fda7a3246b04614ccc2650b6, type: 2}
   - {fileID: 11400000, guid: abe0f0db4e386d244ace9145da730cb8, type: 2}
   questCardNpcPrefab: {fileID: 2935141046899753299, guid: 31469818b99a49447b4b6521e0542f49, type: 3}
   npcPanelContainer: {fileID: 2095898581}
@@ -39202,6 +39204,51 @@ Transform:
   - {fileID: 2026746972}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1466972853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466972854}
+  - component: {fileID: 1466972855}
+  m_Layer: 0
+  m_Name: CoinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466972854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466972853}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 188955087}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1466972855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466972853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89615297a89a3cc41b2a968fddf8bbe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinTest: 1000
 --- !u!1 &1487035810
 GameObject:
   m_ObjectHideFlags: 0
