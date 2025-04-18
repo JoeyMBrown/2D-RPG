@@ -7,17 +7,24 @@ public class LootManager : Singleton<LootManager>
     [SerializeField] private LootButton lootButtonPrefab;
     [SerializeField] private Transform container;
 
-    public void ShowLoot(EnemyLoot enemyLoot)
+    private void OnEnable()
     {
-        // Show the panel
-        lootPanel.SetActive(true);
-        
+        LootButton.ItemPickedUpEvent += AutoClosePanel;
+    }
+
+    private void OnDisable()
+    {
+        LootButton.ItemPickedUpEvent -= AutoClosePanel;
+    }
+
+    public void UpdateLootPanelItems(EnemyLoot enemyLoot)
+    {
         // If the loot panel already has items in it we need to destroy
         // them so that we can rebuild it with the new items.
         if (LootPanelContainsItems())
         {
             // Destroy all of the existing loot buttons in the loot container.
-            for (int i = 0; i < container.childCount; i ++)
+            for (int i = 0; i < container.childCount; i++)
             {
                 Destroy(container.GetChild(i).gameObject);
             }
@@ -35,6 +42,28 @@ public class LootManager : Singleton<LootManager>
             // for the loot button we just created
             lootButton.ConfigLootButton(item);
         }
+
+        ShowLoot();
+    }
+
+    /*
+     * This method exists to auto close loot panel
+     * after last item has been pickedup.
+     */
+    public void AutoClosePanel()
+    {
+        // Here we're doing childCount - 1 because destroy of
+        // game object introduces a potential race condition
+        // where we're checking childcount before it's updated.
+        if (lootPanel.activeInHierarchy && container.childCount - 1 <= 0) CloseLootPanel();
+    }
+
+    public void ShowLoot()
+    {
+        if (!LootPanelContainsItems()) return;
+
+        // Show the panel
+        lootPanel.SetActive(true);
     }
 
     public void CloseLootPanel()

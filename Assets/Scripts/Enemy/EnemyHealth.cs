@@ -58,7 +58,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         animator.SetTrigger("Dead");
         // Disable our enemyBrain script so enemy stops moving etc.
         enemyBrain.enabled = false;
-        // Deselect the enmy because it has died (or emit callback, not necessary JUST deselect)
+        // Deselect the enemy because it has died (or emit callback, not necessary JUST deselect)
         enemySelector.NoSelectionCallback();
         // Updating the enemys layer to "Ignore Raycast".  This will
         // stop projectiles from colliding with it.

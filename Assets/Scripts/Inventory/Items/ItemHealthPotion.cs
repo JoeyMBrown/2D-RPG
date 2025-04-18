@@ -13,7 +13,6 @@ public class ItemHealthPotion : InventoryItem
         if (GameManager.Instance.Player.PlayerHealth.IsInjured())
         {
             GameManager.Instance.Player.PlayerHealth.RestoreHealth(HealthValue);
-            Debug.Log(HealthValue.ToString());
             return true;
         }
 

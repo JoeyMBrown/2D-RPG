@@ -46,7 +46,7 @@ public class SelectionManager : MonoBehaviour
                 if (enemyHealth.CurrentHealth <= 0)
                 {
                     EnemyLoot enemyLoot = enemy.GetComponent<EnemyLoot>();
-                    LootManager.Instance.ShowLoot(enemyLoot);
+                    LootManager.Instance.UpdateLootPanelItems(enemyLoot);
                 }
                 else
                 {

@@ -1,9 +1,12 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LootButton : MonoBehaviour
 {
+    public static event Action ItemPickedUpEvent;
+
     [Header("Config")]
     [SerializeField] private Image itemIcon;
     [SerializeField] private TextMeshProUGUI itemName;
@@ -30,5 +33,6 @@ public class LootButton : MonoBehaviour
         Inventory.Instance.AddItem(ItemLoaded.Item, ItemLoaded.Quantity);
         ItemLoaded.ItemPickedUp = true;
         Destroy(gameObject);
+        ItemPickedUpEvent?.Invoke();
     }
 }
