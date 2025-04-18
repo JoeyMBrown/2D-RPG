@@ -32,6 +32,17 @@ public class ShopCard : MonoBehaviour
         currentCost = initialCost;
     }
 
+    public void BuyItem()
+    {
+        if (CoinManager.Instance.Coins >= currentCost)
+        {
+            Inventory.Instance.AddItem(item.Item, quantity);
+            CoinManager.Instance.RemoveCoins(currentCost);
+            quantity = 1;
+            currentCost = initialCost;
+        }
+    }
+
     public void Add()
     {
         float buyCost = initialCost * (quantity + 1);
