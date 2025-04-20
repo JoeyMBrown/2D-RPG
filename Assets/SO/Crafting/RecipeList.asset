@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d63d687f5fcba4fb0cb57f19aff0d5, type: 3}
+  m_Name: RecipeList
+  m_EditorClassIdentifier: 
+  Recipes:
+  - Name: Health Potion
+    Item1: {fileID: 11400000, guid: a4a1a0206c7936d43b502578d34857c7, type: 2}
+    Item1Amount: 1
+    Item2: {fileID: 11400000, guid: 95c5e08a0aae6224cbf2d6a439b2499d, type: 2}
+    Item2Amount: 1
+    FinalItem: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    FinalItemAmount: 1
+  - Name: Mana Potion
+    Item1: {fileID: 11400000, guid: a4a1a0206c7936d43b502578d34857c7, type: 2}
+    Item1Amount: 1
+    Item2: {fileID: 11400000, guid: 3b0346c37d6928e4e84e277763878673, type: 2}
+    Item2Amount: 1
+    FinalItem: {fileID: 11400000, guid: e543423716a9acf45af561ef80d3ea2b, type: 2}
+    FinalItemAmount: 1
