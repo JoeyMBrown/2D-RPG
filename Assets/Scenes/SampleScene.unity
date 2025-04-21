@@ -6131,6 +6131,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeCardPrefab: {fileID: 113863674853615302, guid: 1997e0da4290efe44951913211821f93, type: 3}
   recipeContainer: {fileID: 1826028163}
+  recipeName: {fileID: 1803942957}
+  item1Icon: {fileID: 705977923}
+  item1Name: {fileID: 686922367}
+  item1Amount: {fileID: 1697314462}
+  item2Icon: {fileID: 1045927446}
+  item2Name: {fileID: 1915217460}
+  item2Amount: {fileID: 568323670}
+  craftButton: {fileID: 40797374}
+  finalItemIcon: {fileID: 1418786684}
+  finalItemName: {fileID: 33226667}
+  finalItemDescription: {fileID: 1769439280}
   recipes: {fileID: 11400000, guid: fa10e6e075b14b641a93c5be9aaf124b, type: 2}
 --- !u!1 &396108175
 GameObject:
@@ -50426,7 +50437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: dropItems.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: dropItems.Array.data[0].Item
@@ -50461,6 +50472,22 @@ PrefabInstance:
       value: Silver Coin x10 - 50%
       objectReference: {fileID: 0}
     - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[4].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 95c5e08a0aae6224cbf2d6a439b2499d, type: 2}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[4].Name
+      value: Honey x10 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[5].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: a4a1a0206c7936d43b502578d34857c7, type: 2}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[5].Name
+      value: Clear Mana x 10 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: dropItems.Array.data[0].Quantity
       value: 1
       objectReference: {fileID: 0}
@@ -50477,6 +50504,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[4].Quantity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[5].Quantity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: dropItems.Array.data[0].DropChance
       value: 100
       objectReference: {fileID: 0}
@@ -50491,6 +50526,14 @@ PrefabInstance:
     - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: dropItems.Array.data[3].DropChance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[4].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778866676031414961, guid: a816cbade24bdec44aac6f7779944197, type: 3}
+      propertyPath: dropItems.Array.data[5].DropChance
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9163779095345880748, guid: a816cbade24bdec44aac6f7779944197, type: 3}
       propertyPath: m_LocalPosition.x

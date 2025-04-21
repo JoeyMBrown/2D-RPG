@@ -13,4 +13,9 @@ public class RecipeCard : MonoBehaviour
         RecipeLoaded = recipe;
         recipeIcon.sprite = recipe.FinalItem.Icon;
     }
+
+    public void SelectRecipe()
+    {
+        CraftingManager.Instance.ShowRecipe(RecipeLoaded);
+    }
 }

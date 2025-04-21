@@ -93,7 +93,7 @@ public class Inventory : Singleton<Inventory>
         if (item == null || quantity <= 0) return;
 
         // Check if we have other slots containing this item.
-        List<int> itemIndexes = CheckItemStock(item.ID);
+        List<int> itemIndexes = CheckItemStockIndexes(item.ID);
 
         // If item is stackable, and we have other slots containing
         // this tiem.
@@ -173,7 +173,7 @@ public class Inventory : Singleton<Inventory>
 
     // This method will return all inventory slots containing
     // the same item as the item passed in.
-    private List<int> CheckItemStock(string itemID)
+    private List<int> CheckItemStockIndexes(string itemID)
     {
         List<int> itemIndexes = new List<int>();
 
@@ -189,6 +189,20 @@ public class Inventory : Singleton<Inventory>
         }
 
         return itemIndexes;
+    }
+
+    public int GetItemCurrentQuantityInInventory(string itemID)
+    {
+        List<int> indexes = CheckItemStockIndexes(itemID);
+
+        int currentQuantity = 0;
+
+        foreach (int index in indexes)
+        {
+            currentQuantity += inventoryItems[index].Quantity;
+        }
+
+        return currentQuantity;
     }
 
     // Hide slot information if (sprite / quantity text) for all
