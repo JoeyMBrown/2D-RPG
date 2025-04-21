@@ -8,6 +8,7 @@ public class CraftingManager : Singleton<CraftingManager>
     [Header("Config")]
     [SerializeField] private RecipeCard recipeCardPrefab;
     [SerializeField] private Transform recipeContainer;
+    [SerializeField] private GameObject craftMaterialsPanel;
 
     [Header("Recipe Info")]
     [SerializeField] private TextMeshProUGUI recipeName;
@@ -27,6 +28,7 @@ public class CraftingManager : Singleton<CraftingManager>
 
     [Header("Recipes")]
     [SerializeField] private RecipeList recipes;
+    public Recipe RecipeSelected { get; set; }
 
     private void Start()
     {
@@ -42,8 +44,32 @@ public class CraftingManager : Singleton<CraftingManager>
         }
     }
 
+    // TODO: Fix me - This is a poor implementation.
+    public void CraftItem()
+    {
+        for (int i = 0; i < RecipeSelected.Item1Amount; i++)
+        {
+            Inventory.Instance.ConsumeItem(RecipeSelected.Item1.ID);
+        }
+
+        for (int i = 0; i < RecipeSelected.Item2Amount; i++)
+        {
+            Inventory.Instance.ConsumeItem(RecipeSelected.Item2.ID);
+        }
+
+        Inventory.Instance.AddItem(RecipeSelected.FinalItem, RecipeSelected.FinalItemAmount);
+        ShowRecipe(RecipeSelected);
+    }
+
     public void ShowRecipe(Recipe recipe)
     {
+        if (craftMaterialsPanel.activeSelf == false)
+        {
+            craftMaterialsPanel.SetActive(true);
+        }
+
+        RecipeSelected = recipe;
+
         recipeName.text = recipe.Name;
         item1Icon.sprite = recipe.Item1.Icon;
         item1Name.text = recipe.Item1.Name;

@@ -171,6 +171,19 @@ public class Inventory : Singleton<Inventory>
         }
     }
 
+    public void ConsumeItem(string itemID)
+    {
+        // Get the inventory indexes of the specific item.
+        List<int> indexes = CheckItemStockIndexes(itemID);
+
+        // If Item exists within our inventory.
+        if (indexes.Count > 0)
+        {
+            // Decrese from the largest index to the smallest.
+            DecreaseItemQuantity(indexes[^1]);
+        }
+    }
+
     // This method will return all inventory slots containing
     // the same item as the item passed in.
     private List<int> CheckItemStockIndexes(string itemID)

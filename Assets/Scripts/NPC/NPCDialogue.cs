@@ -3,7 +3,8 @@ using UnityEngine;
 public enum InteractionType
 {
     Quest,
-    Shop
+    Shop,
+    Crafting
 }
 
 [CreateAssetMenu(menuName = "NPC Dialogue")]
