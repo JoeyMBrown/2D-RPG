@@ -35,6 +35,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     public void TakeDamage(float amount)
     {
         CurrentHealth -= amount;
+        DamageManager.Instance.ShowDamageText(amount, transform);
 
         if (CurrentHealth <= 0) 
         {
@@ -44,11 +45,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             // make more sense.
             QuestManager.Instance.AddProgress("Kill2Enemy", 1);
             QuestManager.Instance.AddProgress("Kill5Enemy", 1);
-        }
-        else
-        {
-            // If the enemy is no dead, then lets show the damage it took.
-            DamageManager.Instance.ShowDamageText(amount, transform);
         }
     }
 
