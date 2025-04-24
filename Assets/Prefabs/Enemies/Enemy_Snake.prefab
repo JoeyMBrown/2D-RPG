@@ -323,6 +323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  enemyHealthBar: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &5413576577808572996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +337,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f11ba416652f0e4fa093ecd8f3e5279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  expDrop: 500
+  dropItems:
+  - Name: Gold Coin x1 - 100%
+    Item: {fileID: 11400000, guid: 7951ab5256529194eb27b972393f734a, type: 2}
+    Quantity: 1
+    DropChance: 100
+  - Name: Health Potion x1 - 10%
+    Item: {fileID: 11400000, guid: 51ff7d96888e3624ca7002054617845b, type: 2}
+    Quantity: 1
+    DropChance: 10
+  - Name: Pickaxe x1 - 100%
+    Item: {fileID: 11400000, guid: 35b73a3f1efcdbb46a8217405942cee0, type: 2}
+    Quantity: 1
+    DropChance: 100
+  - Name: Silver Coin x10 - 50%
+    Item: {fileID: 11400000, guid: d094a6ce38ebe0b439ce371de67f42e5, type: 2}
+    Quantity: 1
+    DropChance: 50
 --- !u!1 &6471364043903105647
 GameObject:
   m_ObjectHideFlags: 0

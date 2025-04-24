@@ -1,5 +1,7 @@
 using System;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Note, this enemy will take damage - so we're extending IDamageable
 public class EnemyHealth : MonoBehaviour, IDamageable
@@ -8,6 +10,10 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     [Header("Config")]
     [SerializeField] private float health;
+
+    [Header("Health Bar")]
+    [SerializeField] private GameObject enemyHealthBar;
+    [SerializeField] private Image healthBar;
     private EnemyBrain enemyBrain;
     private EnemySelector enemySelector;
     private EnemyLoot enemyLoot;
@@ -30,6 +36,21 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     private void Start()
     {
         CurrentHealth = health;
+    }
+
+    private void Update()
+    {
+        UpdateHealthBar();
+    }
+
+    private void UpdateHealthBar()
+    {
+        //Debug.Log($"{CurrentHealth} {health}");
+        healthBar.fillAmount = Mathf.Lerp(
+        healthBar.fillAmount,
+            CurrentHealth / health,
+            10f * Time.deltaTime
+        );
     }
 
     public void TakeDamage(float amount)
@@ -68,5 +89,24 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
         // Use gameManager singleton to grant player exp based on enemy exp drop.
         GameManager.Instance.AddPlayerExp(enemyLoot.ExpDrop);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (CurrentHealth <= 0) return;
+        // If it has a tag of "Player" we set the hp bar as active.
+        if (collision.CompareTag("Player"))
+        {
+            enemyHealthBar.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // If it has a tag of "Player" we can hide health bar.
+        if (collision.CompareTag("Player"))
+        {
+            enemyHealthBar.SetActive(false);
+        }
     }
 }
