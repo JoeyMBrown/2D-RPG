@@ -45,7 +45,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     private void UpdateHealthBar()
     {
-        //Debug.Log($"{CurrentHealth} {health}");
         healthBar.fillAmount = Mathf.Lerp(
         healthBar.fillAmount,
             CurrentHealth / health,
@@ -84,6 +83,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         // enemy clicked for looting, while avoiding projectile collisions.
         // gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
         rb2D.bodyType = RigidbodyType2D.Static;
+        enemyHealthBar.SetActive(false);
         // Fire enemy dead event.
         OnEnemyDeadEvent?.Invoke();
 
